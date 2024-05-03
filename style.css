@@ -31,10 +31,10 @@ p{
 }
 
 .header-top{
-    position: fixed; /* Define a posição fixa */
-    top: 0; /* Fixa o cabeçalho no topo da página */
-    width: 100%; /* Define a largura total */
-    z-index: 1000; /* Z-index para garantir que o cabeçalho esteja acima de outros elementos */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .link-sem-estilo{
@@ -57,7 +57,7 @@ p{
     background-color: #7F8577;
 }
 
-.sobre-mim, .minhas-experiencias, .meus-projetos, .contatos{
+.sobre-mim, .minhas-experiencias, .meus-projetos{
     height: 100vh;
 }
 
@@ -74,14 +74,41 @@ p{
 }
 
 .contatos{
-    padding-top: 100px;
+    height: 90vh;
+    padding-top: 70px;
 }
 
-@keyframes animacao-header {
+.icons-center{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.icon-tamanho{
+    font-size: 50px;
+    color: #CCCCCC;
+}
+
+.icon-tamanho:hover{
+    animation-duration: 1s;
+    animation-name: animacao-icons;
+    font-size: 80px;
+}
+
+@keyframes animacao-header{
     from {
         background-color: #505A42;
     }
     to {
         background-color: #7F8577;
+    }
+}
+
+@keyframes animacao-icons{
+    from {
+        font-size: 50px;
+    }
+    to {
+        font-size: 80px;
     }
 }
