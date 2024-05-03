@@ -5,6 +5,7 @@ body{
 }
 
 h1{
+    padding-top: 50px;
     display: flex;
     justify-content: center;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -27,6 +28,13 @@ p{
     justify-content: space-around;
     align-items: center;
     background-color: #505A42;
+}
+
+.header-top{
+    position: fixed; /* Define a posição fixa */
+    top: 0; /* Fixa o cabeçalho no topo da página */
+    width: 100%; /* Define a largura total */
+    z-index: 1000; /* Z-index para garantir que o cabeçalho esteja acima de outros elementos */
 }
 
 .link-sem-estilo{
@@ -53,8 +61,20 @@ p{
     height: 100vh;
 }
 
+.sobre-mim{
+    
+}
+
 .minhas-experiencias {
-    padding-top: 50px;
+    padding-top: 100px;
+}
+
+.meus-projetos{
+    padding-top: 100px;
+}
+
+.contatos{
+    padding-top: 100px;
 }
 
 @keyframes animacao-header {
@@ -64,4 +84,4 @@ p{
     to {
         background-color: #7F8577;
     }
-  }
+}
