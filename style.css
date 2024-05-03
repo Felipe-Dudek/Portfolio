@@ -1,0 +1,67 @@
+body{
+    margin: 0px;
+    background-color: #27301B;
+    background-repeat: no-repeat;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    color: #FFFFFF;
+}
+
+p{
+    padding: 0px 50px 50px 50px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 16px;
+    color: #CCCCCC;
+}
+
+.header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #505A42;
+}
+
+.link-sem-estilo{
+    text-decoration: none;
+    color: #CCCCCC;
+}
+
+.header-link{
+    width: 25%;
+    height: 50px;
+    background-color: #505A42;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-link:hover{
+    animation-duration: 1s;
+    animation-name: animacao-header;
+    background-color: #7F8577;
+}
+
+.sobre-mim, .minhas-experiencias, .meus-projetos, .contatos{
+    height: 100vh;
+}
+
+.minhas-experiencias {
+    padding-top: 50px;
+}
+
+@keyframes animacao-header {
+    from {
+        background-color: #505A42;
+    }
+    to {
+        background-color: #7F8577;
+    }
+  }
