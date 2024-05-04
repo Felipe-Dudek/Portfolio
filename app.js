@@ -1,3 +1,38 @@
+document.addEventListener('DOMContentLoaded', () => {
+    let valorScroll = 0;
+    window.addEventListener('wheel', (event) => {
+
+        const direcaoScroll = event.deltaY; // Coleta valores do scroll
+        if (direcaoScroll > 0) {  // O scroll está indo para baixo
+            if(valorScroll < 2){
+                valorScroll++;
+            }
+        } 
+        else if (direcaoScroll < 0) { // O scroll está indo para cima
+            if(valorScroll > 0){
+                valorScroll--;
+            }
+        }
+
+        switch (valorScroll) {
+            case 0:
+                scrollSobreMim();
+                console.log("Sobre mim");
+                break;
+            case 1:
+                scrollMinhasExperiencias();
+                console.log("Minhas experiências");
+                break;
+            case 2:
+                scrollContatos();
+                console.log("Contatos");
+                break;
+            default:
+                break;
+        }
+    });
+});
+
 function scrollSobreMim(){
     window.scrollTo({
         top: 0,
@@ -7,15 +42,10 @@ function scrollSobreMim(){
 
 function scrollMinhasExperiencias(){
     const minhasExperiencias = document.getElementById("minhas-experiencias");
-    minhasExperiencias.scrollIntoView({ behavior: "smooth" });
-}
-
-function scrollMeusProjetos(){
-    const minhasExperiencias = document.getElementById("meus-projetos");
-    minhasExperiencias.scrollIntoView({ behavior: "smooth" });
+    minhasExperiencias.scrollIntoView({ behavior: "smooth"});
 }
 
 function scrollContatos(){
-    const minhasExperiencias = document.getElementById("contatos");
-    minhasExperiencias.scrollIntoView({ behavior: "smooth" });
+    const contato = document.getElementById("contatos");
+    contato.scrollIntoView({ behavior: "smooth"});
 }
